@@ -10,5 +10,45 @@
     <name>Thread Safety</name>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>thread-safety-demo</artifactId>
+    <packaging>jar</packaging>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-plugin</artifactId>
+                <!-- 单独执行单元测试
+                <configuration>
+                    <skipTests>false</skipTests>
+                </configuration> -->
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-source-plugin</artifactId>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+            </plugin>
+        </plugins>
+    </build>
+
+    <dependencies>
+
+        <!-- Java Concurrency 配置文件 -->
+        <dependency>
+            <groupId>com.huazie.flea.concurrency</groupId>
+            <artifactId>java-concurrency-config</artifactId>
+            <version>${parent.version}</version>
+            <scope>test</scope>
+        </dependency>
+
+        <!-- FLEA FRAME COMMON-->
+        <dependency>
+            <groupId>com.huazie.frame</groupId>
+            <artifactId>flea-frame-common</artifactId>
+        </dependency>
+
+    </dependencies>
 
 </project>

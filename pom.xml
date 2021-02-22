@@ -104,6 +104,7 @@
 
     <modules>
         <module>thread-safety-demo</module>
+        <module>java-concurrency-config</module>
     </modules>
 
 </project>
