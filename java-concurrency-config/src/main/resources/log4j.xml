@@ -77,6 +77,12 @@
 		<appender-ref ref="myConsole" />
 		<appender-ref ref="myFile"/>
 	</logger>
+
+	<logger name="org.eclipse.jetty">
+		<level value="WARN" />
+		<appender-ref ref="myConsole" />
+		<appender-ref ref="myFile"/>
+	</logger>
 	
 	<!-- 根logger的设置--> 
 	<root>

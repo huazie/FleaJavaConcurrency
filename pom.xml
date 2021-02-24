@@ -19,6 +19,7 @@
 
     <properties>
         <fleaframe.version>1.0.0</fleaframe.version>
+        <jetty.version>9.3.29.v20201019</jetty.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
 
@@ -29,8 +30,8 @@
                 <artifactId>maven-compiler-plugin</artifactId>
                 <version>3.3</version>
                 <configuration>
-                    <source>1.7</source>
-                    <target>1.7</target>
+                    <source>1.8</source>
+                    <target>1.8</target>
                     <encoding>UTF-8</encoding>
                     <compilerArgs>
                         <arg>-g</arg>
@@ -84,6 +85,14 @@
                 <groupId>com.huazie.frame</groupId>
                 <artifactId>flea-frame-bom</artifactId>
                 <version>${fleaframe.version}</version>
+                <type>pom</type>
+                <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.eclipse.jetty</groupId>
+                <artifactId>jetty-bom</artifactId>
+                <version>${jetty.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>

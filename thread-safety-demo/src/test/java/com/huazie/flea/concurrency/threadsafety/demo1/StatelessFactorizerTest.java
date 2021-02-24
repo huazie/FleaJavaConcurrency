@@ -29,8 +29,4 @@ public class StatelessFactorizerTest {
         LOGGER.debug("因式分解的结果为：{}", Arrays.toString(resultArr2));
     }
 
-    @Test
-    public void run() {
-
-    }
 }
