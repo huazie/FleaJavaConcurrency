@@ -1,4 +1,4 @@
-package com.huazie.flea.concurrency.threadsafety.demo1;
+package com.huazie.flea.concurrency.threadsafety.demo2;
 
 import com.huazie.frame.algorithm.factorization.Factor;
 import com.huazie.frame.common.slf4j.FleaLogger;
@@ -13,15 +13,21 @@ import java.math.BigInteger;
 import java.util.Arrays;
 
 /**
- * <p> 无状态的Servlet </p>
+ * <p> 在没有同步的情况下统计已经处理请求数量的Servlet </p>
  *
  * @author huazie
  * @version 1.0.0
  * @since 1.0.0
  */
-public class StatelessFactorizer extends HttpServlet {
+public class UnsafeCountingFactorizer extends HttpServlet {
 
-    private static final FleaLogger LOGGER = FleaLoggerProxy.getProxyInstance(StatelessFactorizer.class);
+    private static final FleaLogger LOGGER = FleaLoggerProxy.getProxyInstance(UnsafeCountingFactorizer.class);
+
+    private long count = 0;
+
+    public long getCount() {
+        return count;
+    }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException{
         BigInteger i = extractFromRequest(req);
@@ -31,6 +37,7 @@ public class StatelessFactorizer extends HttpServlet {
             LOGGER.debug1(obj, "待因数分解的大数：{}", i);
             LOGGER.debug1(obj, "因数分解的结果为：{}", Arrays.toString(factors));
         }
+        ++count;
         encodeIntoResponse(resp, factors);
     }
 
