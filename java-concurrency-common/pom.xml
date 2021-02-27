@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
-
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
         <artifactId>java-concurrency-demo</artifactId>
         <groupId>com.huazie.flea.concurrency</groupId>
         <version>1.0.0</version>
     </parent>
-    <name>Thread Safety</name>
+    <name>Java Concurrency Common</name>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>thread-safety-demo</artifactId>
-    <packaging>war</packaging>
+    <artifactId>java-concurrency-common</artifactId>
+    <packaging>jar</packaging>
 
     <build>
         <plugins>
@@ -43,21 +43,10 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- Java Concurrency Common -->
+        <!-- FLEA FRAME ALGORITHM-->
         <dependency>
-            <groupId>com.huazie.flea.concurrency</groupId>
-            <artifactId>java-concurrency-common</artifactId>
-            <version>${parent.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-server</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-servlet</artifactId>
+            <groupId>com.huazie.frame</groupId>
+            <artifactId>flea-frame-algorithm</artifactId>
         </dependency>
 
     </dependencies>

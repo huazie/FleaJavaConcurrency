@@ -1,6 +1,7 @@
 package com.huazie.flea.concurrency.threadsafety;
 
 import com.huazie.flea.concurrency.threadsafety.demo1.StatelessFactorizer;
+import com.huazie.flea.concurrency.threadsafety.demo2.UnsafeCountingFactorizer;
 import com.huazie.frame.common.slf4j.FleaLogger;
 import com.huazie.frame.common.slf4j.impl.FleaLoggerProxy;
 import org.eclipse.jetty.server.Connector;
@@ -31,7 +32,8 @@ public class JettyStarter {
 		server.setConnectors(new Connector[] { connector });
 		ServletContextHandler context = new ServletContextHandler();
 		context.setContextPath("/");
-		context.addServlet(StatelessFactorizer.class, "/demo");
+		context.addServlet(StatelessFactorizer.class, "/demo1");
+		context.addServlet(UnsafeCountingFactorizer.class, "/demo2");
 		HandlerCollection handlers = new HandlerCollection();
 		handlers.setHandlers(new Handler[] { context, new DefaultHandler() });
 		server.setHandler(handlers);
