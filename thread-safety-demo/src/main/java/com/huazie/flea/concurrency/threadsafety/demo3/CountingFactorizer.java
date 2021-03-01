@@ -1,6 +1,6 @@
-package com.huazie.flea.concurrency.threadsafety.demo2;
+package com.huazie.flea.concurrency.threadsafety.demo3;
 
-import com.huazie.flea.concurrency.common.NotThreadSafe;
+import com.huazie.flea.concurrency.common.ThreadSafe;
 import com.huazie.flea.concurrency.common.util.CommonUtils;
 import com.huazie.frame.algorithm.factorization.Factor;
 
@@ -9,28 +9,28 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.math.BigInteger;
+import java.util.concurrent.atomic.AtomicLong;
 
 /**
- * <p> 在没有同步的情况下统计已经处理请求数量的Servlet（非线程安全，不推荐使用）</p>
+ * <p> 使用 AtomicLong 类型的变量来统计已处理请求的数量 </p>
  *
  * @author huazie
  * @version 1.0.0
  * @since 1.0.0
  */
-@NotThreadSafe
-public class UnsafeCountingFactorizer extends HttpServlet {
+@ThreadSafe
+public class CountingFactorizer extends HttpServlet {
 
-    private long count = 0;
+    private final AtomicLong count = new AtomicLong(0);
 
     public long getCount() {
-        return count;
+        return count.get();
     }
 
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException{
         BigInteger i = CommonUtils.extractFromRequest(req);
         BigInteger[] factors = Factor.factor(i);
-        ++count;
+        count.incrementAndGet();
         CommonUtils.encodeIntoResponse(resp, factors);
     }
-
 }
