@@ -115,6 +115,7 @@
         <module>thread-safety-demo</module>
         <module>java-concurrency-config</module>
         <module>java-concurrency-common</module>
+        <module>object-sharing-demo</module>
     </modules>
 
 </project>
