@@ -3,7 +3,7 @@ package com.huazie.flea.concurrency.objectsharing.demo1;
 import com.huazie.flea.concurrency.common.NotThreadSafe;
 
 /**
- * <p> 非现场安全的可变整数类 </p>
+ * <p> 非线程安全的可变整数类 </p>
  *
  * @author huazie
  * @version 1.0.0
