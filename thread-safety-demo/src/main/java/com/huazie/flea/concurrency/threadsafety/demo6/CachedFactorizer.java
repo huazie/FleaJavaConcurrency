@@ -41,7 +41,7 @@ public class CachedFactorizer extends HttpServlet {
         return (double) cacheHits / (double) hits;
     }
 
-    protected synchronized void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
+    protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws IOException {
         BigInteger i = CommonUtils.extractFromRequest(req);
         BigInteger[] factors = null;
         synchronized (this) {
