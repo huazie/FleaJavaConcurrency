@@ -116,6 +116,7 @@
         <module>java-concurrency-config</module>
         <module>java-concurrency-common</module>
         <module>object-sharing-demo</module>
+        <module>object-combination-demo</module>
     </modules>
 
 </project>
