@@ -1,6 +1,6 @@
 package com.huazie.flea.concurrency.objectcombination.demo;
 
-import com.huazie.flea.concurrency.common.GuardedBy;
+import javax.annotation.concurrent.GuardedBy;
 
 /**
  * <p> 使用 Java 监视器模式的线程安全计数器 </p>

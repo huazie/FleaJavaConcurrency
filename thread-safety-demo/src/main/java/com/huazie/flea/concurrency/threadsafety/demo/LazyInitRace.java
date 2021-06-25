@@ -1,6 +1,6 @@
 package com.huazie.flea.concurrency.threadsafety.demo;
 
-import com.huazie.flea.concurrency.common.NotThreadSafe;
+import javax.annotation.concurrent.NotThreadSafe;
 
 /**
  * <p> 延迟初始化中的竞态条件（非线程安全，不推荐使用） </p>

@@ -1,6 +1,6 @@
 package com.huazie.flea.concurrency.threadsafety.demo4;
 
-import com.huazie.flea.concurrency.common.NotThreadSafe;
+import javax.annotation.concurrent.NotThreadSafe;
 import com.huazie.flea.concurrency.common.util.CommonUtils;
 import com.huazie.frame.algorithm.factorization.Factor;
 

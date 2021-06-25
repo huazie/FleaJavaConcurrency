@@ -49,6 +49,13 @@
             <artifactId>flea-frame-algorithm</artifactId>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.xbib/jsr-305 -->
+        <dependency>
+            <groupId>org.xbib</groupId>
+            <artifactId>jsr-305</artifactId>
+            <version>1.0.0</version>
+        </dependency>
+
     </dependencies>
 
 </project>

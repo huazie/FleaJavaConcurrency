@@ -1,6 +1,6 @@
 package com.huazie.flea.concurrency.objectsharing.demo1;
 
-import com.huazie.flea.concurrency.common.NotThreadSafe;
+import javax.annotation.concurrent.NotThreadSafe;
 
 /**
  * <p> 非线程安全的可变整数类 </p>

@@ -1,6 +1,6 @@
 package com.huazie.flea.concurrency.objectsharing.demo1;
 
-import com.huazie.flea.concurrency.common.GuardedBy;
+import javax.annotation.concurrent.GuardedBy;
 
 /**
  * <p> 非线程安全的可变整数类 </p>
