@@ -22,7 +22,7 @@ public class MonitorVehicleTracker {
     private final Map<String, MutablePoint> locations;
 
     public MonitorVehicleTracker(Map<String, MutablePoint> locations) {
-        this.locations = locations;
+        this.locations = deepCopy(locations);
     }
 
     public synchronized Map<String, MutablePoint> getLocations() {
