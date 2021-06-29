@@ -22,9 +22,23 @@ public class DelegatingVehicleTracker {
         unmodifiableMap = Collections.unmodifiableMap(locations);
     }
 
+    /**
+     * 返回一个不可修改但却实时的车辆位置视图
+     *
+     * @return 一个不可修改但却实时的车辆位置视图
+     */
     public Map<String, Point> getLocations() {
         return unmodifiableMap;
     }
+
+    /**
+     * 返回 locations 的静态拷贝而非实时拷贝
+     *
+     * @return 一个不发生变化的车辆视图
+     */
+//    public Map<String, Point> getLocations() {
+//        return Collections.unmodifiableMap(new HashMap<String, Point>(locations));
+//    }
 
     public Point getLocation(String id) {
         return locations.get(id);
