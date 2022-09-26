@@ -18,7 +18,7 @@
     </developers>
 
     <properties>
-        <fleaframe.version>1.0.0</fleaframe.version>
+        <fleaframework.version>2.0.0</fleaframework.version>
         <jetty.version>9.3.29.v20201019</jetty.version>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     </properties>
@@ -81,10 +81,11 @@
 
     <dependencyManagement>
         <dependencies>
+            <!-- FLEA FRAMEWORK -->
             <dependency>
-                <groupId>com.huazie.frame</groupId>
-                <artifactId>flea-frame-bom</artifactId>
-                <version>${fleaframe.version}</version>
+                <groupId>com.huazie.fleaframework</groupId>
+                <artifactId>flea-framework-bom</artifactId>
+                <version>${fleaframework.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
@@ -117,6 +118,7 @@
         <module>java-concurrency-common</module>
         <module>object-sharing-demo</module>
         <module>object-combination-demo</module>
+        <module>basic-building-module-demo</module>
     </modules>
 
 </project>

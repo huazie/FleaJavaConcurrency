@@ -14,15 +14,11 @@ public class PrivateLock {
     private final Object myLock = new Object();
 
     @GuardedBy("myLock")
-    Widget widget;
+    Person person;
 
     void someMethod() {
         synchronized (myLock) {
             // 访问和修改Widget的状态
         }
-    }
-
-    class Widget {
-
     }
 }

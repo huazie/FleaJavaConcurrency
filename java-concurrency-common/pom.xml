@@ -43,10 +43,10 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- FLEA FRAME ALGORITHM-->
+        <!-- FLEA ALGORITHM-->
         <dependency>
-            <groupId>com.huazie.frame</groupId>
-            <artifactId>flea-frame-algorithm</artifactId>
+            <groupId>com.huazie.fleaframework</groupId>
+            <artifactId>flea-algorithm</artifactId>
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.xbib/jsr-305 -->

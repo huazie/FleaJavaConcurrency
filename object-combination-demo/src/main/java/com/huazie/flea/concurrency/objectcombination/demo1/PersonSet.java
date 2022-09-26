@@ -1,7 +1,6 @@
 package com.huazie.flea.concurrency.objectcombination.demo1;
 
 import javax.annotation.concurrent.ThreadSafe;
-
 import java.util.HashSet;
 import java.util.Set;
 
@@ -25,7 +24,4 @@ public class PersonSet {
         return mySet.contains(p);
     }
 
-    class Person {
-
-    }
 }

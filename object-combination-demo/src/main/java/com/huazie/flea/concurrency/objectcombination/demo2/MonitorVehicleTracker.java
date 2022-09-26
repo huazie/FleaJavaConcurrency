@@ -1,7 +1,5 @@
 package com.huazie.flea.concurrency.objectcombination.demo2;
 
-import org.apache.commons.collections.CollectionUtils;
-
 import javax.annotation.concurrent.GuardedBy;
 import javax.annotation.concurrent.ThreadSafe;
 import java.util.Collections;
@@ -25,6 +23,10 @@ public class MonitorVehicleTracker {
         this.locations = deepCopy(locations);
     }
 
+    /**
+     * 当有大量车辆需要追踪的时候，这里执行的复制操作花费可能就会比较长，
+     * 车辆追踪器的内置锁将一直被占用，这样会严重降低用户界面的响应灵敏度
+     */
     public synchronized Map<String, MutablePoint> getLocations() {
         return deepCopy(locations);
     }

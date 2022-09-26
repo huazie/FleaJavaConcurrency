@@ -1,7 +1,6 @@
 package com.huazie.flea.concurrency.objectsharing.demo4;
 
 import javax.annotation.concurrent.Immutable;
-
 import java.math.BigInteger;
 import java.util.Arrays;
 

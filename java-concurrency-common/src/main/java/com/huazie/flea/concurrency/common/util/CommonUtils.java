@@ -1,7 +1,7 @@
 package com.huazie.flea.concurrency.common.util;
 
-import com.huazie.frame.common.slf4j.FleaLogger;
-import com.huazie.frame.common.slf4j.impl.FleaLoggerProxy;
+import com.huazie.fleaframework.common.slf4j.FleaLogger;
+import com.huazie.fleaframework.common.slf4j.impl.FleaLoggerProxy;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -36,5 +36,11 @@ public class CommonUtils {
             LOGGER.debug1(new Object() {}, "因数分解的结果为：{}", Arrays.toString(factors));
         }
         out.write("因数分解的结果为：" + Arrays.toString(factors));
+    }
+
+    public static void encodeError(HttpServletResponse response, String msg) throws IOException {
+        response.setHeader("content-type", "text/plain;charset=utf-8");
+        PrintWriter out = response.getWriter();
+        out.write("Error => " + msg);
     }
 }

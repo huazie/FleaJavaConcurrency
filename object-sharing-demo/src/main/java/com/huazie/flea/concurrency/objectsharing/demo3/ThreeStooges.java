@@ -1,7 +1,6 @@
 package com.huazie.flea.concurrency.objectsharing.demo3;
 
 import javax.annotation.concurrent.Immutable;
-
 import java.util.HashSet;
 import java.util.Set;
 

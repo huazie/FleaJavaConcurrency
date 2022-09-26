@@ -1,9 +1,9 @@
 package com.huazie.flea.concurrency.threadsafety.demo4;
 
-import javax.annotation.concurrent.NotThreadSafe;
 import com.huazie.flea.concurrency.common.util.CommonUtils;
 import com.huazie.frame.algorithm.factorization.Factor;
 
+import javax.annotation.concurrent.NotThreadSafe;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

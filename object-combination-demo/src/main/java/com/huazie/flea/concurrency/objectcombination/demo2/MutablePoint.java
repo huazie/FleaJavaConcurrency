@@ -12,9 +12,7 @@ import javax.annotation.concurrent.NotThreadSafe;
 @NotThreadSafe
 public class MutablePoint {
 
-    public int x;
-
-    public int y;
+    public int x, y;
 
     public MutablePoint() {
         x = 0;

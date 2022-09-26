@@ -18,7 +18,7 @@ public class DelegatingVehicleTracker {
     private final Map<String, Point> unmodifiableMap;
 
     public DelegatingVehicleTracker(Map<String, Point> points) {
-        locations = new ConcurrentHashMap<String, Point>(points);
+        locations = new ConcurrentHashMap<>(points);
         unmodifiableMap = Collections.unmodifiableMap(locations);
     }
 
