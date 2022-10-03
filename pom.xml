@@ -119,6 +119,7 @@
         <module>object-sharing-demo</module>
         <module>object-combination-demo</module>
         <module>basic-building-module-demo</module>
+        <module>thread-executor-demo</module>
     </modules>
 
 </project>

@@ -6,3 +6,4 @@ java-concurrency-common/target/
 object-sharing-demo/target/
 object-combination-demo/target/
 basic-building-module-demo/target/
+thread-executor-demo/target

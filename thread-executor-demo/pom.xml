@@ -7,9 +7,9 @@
         <groupId>com.huazie.flea.concurrency</groupId>
         <version>1.0.0</version>
     </parent>
-    <name>Basic Building Module</name>
+    <name>Thread Executor</name>
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>basic-building-module-demo</artifactId>
+    <artifactId>thread-executor-demo</artifactId>
     <packaging>jar</packaging>
 
     <build>
@@ -49,15 +49,6 @@
             <version>${parent.version}</version>
         </dependency>
 
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-server</artifactId>
-        </dependency>
-
-        <dependency>
-            <groupId>org.eclipse.jetty</groupId>
-            <artifactId>jetty-servlet</artifactId>
-        </dependency>
     </dependencies>
 
 </project>
