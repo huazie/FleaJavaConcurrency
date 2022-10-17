@@ -1,8 +1,8 @@
 package com.huazie.flea.concurrency.threadsafety.demo1;
 
-import com.huazie.frame.algorithm.factorization.Factor;
-import com.huazie.frame.common.slf4j.FleaLogger;
-import com.huazie.frame.common.slf4j.impl.FleaLoggerProxy;
+import com.huazie.fleaframework.algorithm.factorization.Factor;
+import com.huazie.fleaframework.common.slf4j.FleaLogger;
+import com.huazie.fleaframework.common.slf4j.impl.FleaLoggerProxy;
 import org.junit.Test;
 
 import java.math.BigInteger;

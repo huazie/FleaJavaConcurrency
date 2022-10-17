@@ -1,7 +1,7 @@
 package com.huazie.flea.concurrency.objectsharing.demo4;
 
 import com.huazie.flea.concurrency.common.util.CommonUtils;
-import com.huazie.frame.algorithm.factorization.Factor;
+import com.huazie.fleaframework.algorithm.factorization.Factor;
 
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;

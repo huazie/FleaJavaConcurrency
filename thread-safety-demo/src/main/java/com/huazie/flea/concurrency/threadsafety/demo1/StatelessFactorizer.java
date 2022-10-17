@@ -1,7 +1,7 @@
 package com.huazie.flea.concurrency.threadsafety.demo1;
 
 import com.huazie.flea.concurrency.common.util.CommonUtils;
-import com.huazie.frame.algorithm.factorization.Factor;
+import com.huazie.fleaframework.algorithm.factorization.Factor;
 
 import javax.annotation.concurrent.ThreadSafe;
 import javax.servlet.http.HttpServlet;
