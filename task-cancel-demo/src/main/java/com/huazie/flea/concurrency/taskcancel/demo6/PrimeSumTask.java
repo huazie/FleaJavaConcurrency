@@ -1,4 +1,4 @@
-package com.huazie.flea.concurrency.taskcancel.demo5;
+package com.huazie.flea.concurrency.taskcancel.demo6;
 
 import com.huazie.fleaframework.common.slf4j.FleaLogger;
 import com.huazie.fleaframework.common.slf4j.impl.FleaLoggerProxy;
@@ -11,62 +11,46 @@ import java.math.BigInteger;
 import java.net.Socket;
 
 /**
- * 通过改写 interrput 方法将非标准的取消操作封装在 Thread 中
- *
  * @author huazie
  * @version 1.0.0
  * @since 1.0.0
  */
-public class ReaderThread extends Thread {
+public class PrimeSumTask extends SocketUsingTask<BigInteger> {
 
-    private static final FleaLogger LOGGER = FleaLoggerProxy.getProxyInstance(ReaderThread.class);
+    private static final FleaLogger LOGGER = FleaLoggerProxy.getProxyInstance(PrimeSumTask.class);
 
-    private final Socket socket;
-
-    private final InputStream in;
-
-    public ReaderThread(Socket socket) throws IOException {
-        this.socket = socket;
-        this.in = socket.getInputStream();
+    public PrimeSumTask(Socket socket) {
+        super(socket);
     }
 
     @Override
-    public void interrupt() {
-        LOGGER.debug("start interrupt");
+    public BigInteger call() {
+        BigInteger result = null;
         try {
-            socket.close();
-            LOGGER.debug("socket close");
-        } catch (IOException e) {
-            //
-        } finally {
-            super.interrupt();
-            LOGGER.debug("end interrupt");
-        }
-    }
-
-    @Override
-    public void run() {
-        try {
+            InputStream in = getSocket().getInputStream();
             InputStreamReader inputStreamReader = new InputStreamReader(in);
             BufferedReader bufferedReader = new BufferedReader(inputStreamReader);
             String data;
             while ((data = bufferedReader.readLine()) != null) {
-                processData(data);
+                result = processData(data);
             }
         } catch (IOException e) {
             // 允许线程退出
         }
+        return result;
     }
 
     /**
-     * 输出 0 ~ data 区间内的素数
+     * 计算 0 ~ data 区间内的素数总和
      */
-    private void processData(String data) {
+    private BigInteger processData(String data) {
         LOGGER.debug("0 < All Primes < {}", data);
         BigInteger prime = BigInteger.ONE;
+        BigInteger sum = BigInteger.ZERO;
         while (!Thread.currentThread().isInterrupted() && prime.compareTo(BigInteger.valueOf(Long.valueOf(data))) < 0) {
-            LOGGER.debug("prime = {}", prime);
+            sum = sum.add(prime);
             prime = prime.nextProbablePrime();
         }
+        return sum;
     }
 }

@@ -1,8 +1,7 @@
-package com.huazie.flea.concurrency.taskcancel.demo3;
+package com.huazie.flea.concurrency.taskcancel.demo4;
 
 import com.huazie.flea.concurrency.taskcancel.demo.PrimeGenerator;
 import com.huazie.flea.concurrency.taskcancel.demo2.PrimeProducer;
-import com.huazie.flea.concurrency.taskcancel.demo4.TaskUtils;
 import com.huazie.fleaframework.common.slf4j.FleaLogger;
 import com.huazie.fleaframework.common.slf4j.impl.FleaLoggerProxy;
 import org.junit.Test;
@@ -16,8 +15,8 @@ import static java.util.concurrent.TimeUnit.SECONDS;
 
 /**
  * @author huazie
- * @version 2.0.0
- * @since 2.0.0
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public class TimeRunTest {
 

@@ -10,8 +10,8 @@ import java.util.concurrent.BlockingQueue;
  * 不可靠的取消操作将把生产者置于阻塞的操作中（不要这么做）
  *
  * @author huazie
- * @version 2.0.0
- * @since 2.0.0
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public class BrokenPrimeProducer extends Thread {
 

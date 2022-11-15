@@ -15,8 +15,8 @@ import static com.huazie.flea.concurrency.common.util.ExceptionUtils.launderThro
 
 /**
  * @author huazie
- * @version 2.0.0
- * @since 2.0.0
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public class TaskUtils {
 
@@ -87,7 +87,6 @@ public class TaskUtils {
             task.cancel(true);
             LOGGER.debug1(new Object(){}, "cancel end");
             LOGGER.debug1(new Object(){}, "task is cancelled : {}", task.isCancelled());
-
         }
     }
 }

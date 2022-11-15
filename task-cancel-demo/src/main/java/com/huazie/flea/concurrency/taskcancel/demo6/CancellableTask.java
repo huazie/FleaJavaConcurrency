@@ -5,8 +5,8 @@ import java.util.concurrent.RunnableFuture;
 
 /**
  * @author huazie
- * @version 2.0.0
- * @since 2.0.0
+ * @version 1.0.0
+ * @since 1.0.0
  */
 public interface CancellableTask<T> extends Callable<T> {
     void cancel();
