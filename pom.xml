@@ -122,6 +122,7 @@
         <module>thread-executor-demo</module>
         <module>task-cancel-demo</module>
         <module>task-shutdown-demo</module>
+        <module>thread-pool-demo</module>
     </modules>
 
 </project>
